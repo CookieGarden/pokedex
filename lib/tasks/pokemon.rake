@@ -1,3 +1,5 @@
+
+# $ rails "pokemon:fetch_data"
 namespace :pokemon do
   desc "初代のポケモンを取得"
   task fetch_data: :environment do
@@ -12,5 +14,13 @@ namespace :pokemon do
 
     puts "Fetching Pokemon data from #{start_id} to #{end_id}..."
     Pokemon.fetch_and_save_pokemon_data(start_id, end_id)
+  end
+end
+
+namespace :type do
+  desc "全タイプデータを取得"
+  task fetch_data: :environment do
+    puts "タイプデータの取得を開始します..."
+    Type.fetch_and_save_type_data
   end
 end
