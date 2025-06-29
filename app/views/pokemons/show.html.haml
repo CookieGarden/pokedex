@@ -1,2 +1,6 @@
-%h1 Pokemons#show
-%p Find me in app/views/pokemons/show.html.erb
+%h1 ポケモン詳細
+
+- if @image_url
+  = image_tag @image_url, alt: @name
+
+%h2= @name
