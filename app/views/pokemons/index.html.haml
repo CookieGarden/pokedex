@@ -1,2 +1,8 @@
 %h1 Pokemons#index
-= @response
+= @pokemons.each do |pokemon|
+  %h2= link_to pokemon.name, pokemon_path(pokemon)
+  - if pokemon.image_url
+    = image_tag pokemon.image_url, alt: pokemon.name
+  -# %p= pokemon.description
+  %hr
+  
