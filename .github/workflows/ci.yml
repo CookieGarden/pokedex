@@ -68,7 +68,7 @@ jobs:
           
     steps:
       - name: Checkout code # GitHubのリポジトリからコードをチェックアウトします。
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Ruby # Rubyのセットアップを行います。
         uses: ruby/setup-ruby@v1
@@ -104,7 +104,7 @@ jobs:
         working-directory: .
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
